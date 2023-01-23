@@ -78,8 +78,8 @@ jobs:
           git config --global user.name "HolaJinn"
           git config --global user.email "HolaJinn@users.noreply.github.com"
           #git remote set-url origin https://x-access-token:${{ secrets.TOKEN }}@github.com/HolaJinn/Simple-App
-          git add testbar.bar
-          git commit -m "Add testbar.bar"
+          git add build/GeneratedbarFiles/
+          git commit -m "Add bar files"
           git push
           
           #ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/ibmint package --input-path ./build/Test.App/ --output-bar-file ./testbar.bar --do-not-compile-java
