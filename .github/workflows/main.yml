@@ -70,7 +70,9 @@ jobs:
           export MQSI_WORKPATH=$PWD/ace-minimal-image-unzip/var/mqsi
           . ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiprofile
           ### This command works ###
-          ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsipackagebar -w ./build/GeneratedBarFiles/ -a testbar.bar -o build/HTTPInputApplication/HTTPInputMessageFlow.msgflow -k build/HTTPInputApplication
+          ls -al
+          ls -al build
+          ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsipackagebar -w build/GeneratedBarFiles/ -a testbar.bar -o build/HTTPInputApplication/HTTPInputMessageFlow.msgflow -k build/HTTPInputApplication
           ls -al
           #ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b testbar.bar -p build/Test.App/properties/DEV.properties -o ./testbar_DEV.bar -r
           #ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b testbar.bar -p build/Test.App/properties/QA.properties -o ./testbar_QA.bar -r
