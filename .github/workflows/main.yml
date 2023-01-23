@@ -71,8 +71,8 @@ jobs:
           . ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiprofile
           ### This command works ###
           ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsipackagebar -w . -a build/GeneratedBarFiles/testbar.bar -o build/HTTPInputApplication/HTTPInputMessageFlow.msgflow -k ./build/HTTPInputApplication
-          ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b build/GeneratedBarFiles/testbar.bar -p build/properties/DEV.properties -o .build/GeneratedBarFiles/testbar_DEV.bar -r
-          ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b build/GeneratedBarFiles/testbar.bar -p build/properties/QA.properties -o .build/GeneratedBarFiles/testbar_QA.bar -r
+          ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b build/GeneratedBarFiles/testbar.bar -p build/properties/DEV.properties -o build/GeneratedBarFiles/testbar_DEV.bar -r
+          ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b build/GeneratedBarFiles/testbar.bar -p build/properties/QA.properties -o build/GeneratedBarFiles/testbar_QA.bar -r
           ls -al build/GeneratedBarFiles
           
           #git config --global user.name "HolaJinn"
