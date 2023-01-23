@@ -73,14 +73,13 @@ jobs:
           ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsipackagebar -w . -a build/GeneratedBarFiles/testbar.bar -o build/HTTPInputApplication/HTTPInputMessageFlow.msgflow -k ./build/HTTPInputApplication
           ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b build/GeneratedBarFiles/testbar.bar -p build/properties/DEV.properties -o build/GeneratedBarFiles/testbar_DEV.bar -r
           ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b build/GeneratedBarFiles/testbar.bar -p build/properties/QA.properties -o build/GeneratedBarFiles/testbar_QA.bar -r
-          ls -al
+          ls -al ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/
           
-          git config --global user.name "HolaJinn"
-          git config --global user.email "HolaJinn@users.noreply.github.com"
-          #git remote set-url origin https://x-access-token:${{ secrets.TOKEN }}@github.com/HolaJinn/Simple-App
-          git add ./build/GeneratedBarFiles/*
-          git commit -m "Add bar files"
-          git push
+          #git config --global user.name "HolaJinn"
+          #git config --global user.email "HolaJinn@users.noreply.github.com"
+          #git add ./build/GeneratedBarFiles/*
+          #git commit -m "Add bar files"
+          #git push
           
           #ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/ibmint package --input-path ./build/Test.App/ --output-bar-file ./testbar.bar --do-not-compile-java
           #pwd
