@@ -83,14 +83,17 @@ jobs:
           export LICENSE=accept
           export MQSI_WORKPATH=$PWD/ace-minimal-image-unzip/var/mqsi
           . ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiprofile
-          #ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/ibmint package --input-path build/HTTPInputApplication_Test --output-bar-file unittest.bar
-          
-          ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsipackagebar -w . -a build/GeneratedBarFiles/unittest.bar -o build/HTTPInputApplication_Test -k ./build/HTTPInputApplication_Test
-          ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/ibmint package --input-bar-file build/GeneratedBarFiles/unittest.bar --output-bar-file build/GeneratedBarFiles/unittest.bar
           
           ls -al 
           ls -al build
           ls -al build/GeneratedBarFiles
+          
+          ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/ibmint package --input-path build/HTTPInputApplication_Test --output-bar-file unittest.bar
+          
+          ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsipackagebar -w . -a build/GeneratedBarFiles/unittest.bar -o build/HTTPInputApplication_Test -k ./build/HTTPInputApplication_Test
+          ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/ibmint package --input-bar-file build/GeneratedBarFiles/unittest.bar --output-bar-file build/GeneratedBarFiles/unittest.bar
+          
+          
           
           ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsicreateworkdir workdir
           ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/ibmint deploy --input-bar-file ./build/GeneratedBarFiles/testbar.bar --output-work-dir workdir
