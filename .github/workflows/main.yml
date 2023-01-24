@@ -77,7 +77,7 @@ jobs:
           ls -al 
           ls -al ./build
           ls -al ./build/HTTPInputApplication_Test
-          ibmint package --input-path build/HTTPInputApplication_Test --output-bar-file build/GeneratedBarFiles/unittest.bar
+          ibmint package --input-path build/HTTPInputApplication_Test --output-bar-file unittest.bar
           
           #git config --global user.name "HolaJinn"
           #git config --global user.email "HolaJinn@users.noreply.github.com"
