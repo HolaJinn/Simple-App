@@ -39,6 +39,8 @@ jobs:
           mkdir build
           mv * build || /bin/true
           
+          echo 'build'
+          
           ########################################################################
           # 
           # Download ace-minimal image; could use ace-minimal-build but in our
@@ -69,11 +71,33 @@ jobs:
           export LICENSE=accept
           export MQSI_WORKPATH=$PWD/ace-minimal-image-unzip/var/mqsi
           . ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiprofile
-          ### This command works ###
+          ### This command works for building bar file and overriding properties ###
           ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsipackagebar -w . -a build/GeneratedBarFiles/testbar.bar -o build/HTTPInputApplication/HTTPInputMessageFlow.msgflow -k ./build/HTTPInputApplication
           ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b build/GeneratedBarFiles/testbar.bar -p build/properties/DEV.properties -o build/GeneratedBarFiles/testbar_DEV.bar -r
           ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b build/GeneratedBarFiles/testbar.bar -p build/properties/QA.properties -o build/GeneratedBarFiles/testbar_QA.bar -r
-          ls -al ace-minimal-image-unzip/opt/ibm/ace-12/server/bin
+      
+          ls -al ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/
+      
+      - name: Unit Testing
+        run: | 
+          export LICENSE=accept
+          export MQSI_WORKPATH=$PWD/ace-minimal-image-unzip/var/mqsi
+          . ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiprofile
+          
+          ls -al 
+          ls -al build
+          
+          ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/ibmint package --input-path build/HTTPInputApplication_Test  --output-bar-file unittest.bar
+          
+          ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsipackagebar -w . -a build/GeneratedBarFiles/unittest.bar -o build/HTTPInputApplication_Test -k ./build/HTTPInputApplication_Test
+          ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/ibmint package --input-bar-file build/GeneratedBarFiles/unittest.bar --output-bar-file build/GeneratedBarFiles/unittest.bar
+          
+          
+          
+          ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsicreateworkdir workdir
+          ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/ibmint deploy --input-bar-file ./build/GeneratedBarFiles/testbar.bar --output-work-dir workdir
+          ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/ibmint deploy --input-bar-file ./build/GeneratedBarFiles/unittest.bar --output-work-dir workdir
+          IntegrationServer --work-dir workdir --test-project ./build/HTTPInputApplication_Test --start-msgflows false
           
           #git config --global user.name "HolaJinn"
           #git config --global user.email "HolaJinn@users.noreply.github.com"
