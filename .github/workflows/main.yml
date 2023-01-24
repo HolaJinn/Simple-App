@@ -71,9 +71,7 @@ jobs:
           export LICENSE=accept
           export MQSI_WORKPATH=$PWD/ace-minimal-image-unzip/var/mqsi
           . ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiprofile
-          
-          ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/ibmint package --input-path build/HTTPInputApplication --output-bar-file testbar.bar
-          
+                    
           ### This command works for building bar file and overriding properties ###
           ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsipackagebar -w . -a build/GeneratedBarFiles/testbar.bar -o build/HTTPInputApplication/HTTPInputMessageFlow.msgflow -k ./build/HTTPInputApplication
           ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b build/GeneratedBarFiles/testbar.bar -p build/properties/DEV.properties -o build/GeneratedBarFiles/testbar_DEV.bar -r
