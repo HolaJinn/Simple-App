@@ -84,8 +84,8 @@ jobs:
           export LICENSE=accept
           export MQSI_WORKPATH=$PWD/ace-minimal-image-unzip/var/mqsi
           . ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiprofile
-          cd build
-          ../ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/ibmint package --input-path HTTPInputApplication_Test --output-bar-file unittest.bar
+          #ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/ibmint package --input-path HTTPInputApplication_Test --output-bar-file unittest.bar
+          ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsipackagebar -w . -a unittest.bar -o build/HTTPInputApplication_Test -k ./build/HTTPInputApplication_Test
           
           #git config --global user.name "HolaJinn"
           #git config --global user.email "HolaJinn@users.noreply.github.com"
