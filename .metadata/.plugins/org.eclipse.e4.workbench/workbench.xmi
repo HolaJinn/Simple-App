@@ -3,7 +3,7 @@
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.ibm.etools.mft.bar.editor&quot; name=&quot;HTTPInputApplicationproject.TestMode.bar&quot; tooltip=&quot;TestModeBarFiles/HTTPInputApplicationproject.TestMode.bar&quot;>&#xD;&#xA;&lt;persistable path=&quot;/TestModeBarFiles/HTTPInputApplicationproject.TestMode.bar&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;HTTPInputApplication_HTTPInputMessageFlow_Mapping_0001_Test.java&quot; tooltip=&quot;HTTPInputApplication_Test/src/main/java/test/HTTPInputApplication_HTTPInputMessageFlow_Mapping_0001_Test.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/HTTPInputApplication_Test/src/main/java/test/HTTPInputApplication_HTTPInputMessageFlow_Mapping_0001_Test.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.ibm.msl.mapping.internal.ui.editor.MappingEditor&quot; name=&quot;HTTPInputMessageFlow_Mapping.map&quot; tooltip=&quot;HTTPInputApplication/HTTPInputMessageFlow_Mapping.map&quot;>&#xD;&#xA;&lt;persistable path=&quot;/HTTPInputApplication/HTTPInputMessageFlow_Mapping.map&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.ibm.etools.mft.flow.editor&quot; name=&quot;HTTPInputMessageFlow.msgflow&quot; tooltip=&quot;HTTPInputApplication/HTTPInputMessageFlow.msgflow&quot;>&#xD;&#xA;&lt;persistable path=&quot;/HTTPInputApplication/HTTPInputMessageFlow.msgflow&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;com.ibm.bpm.gettingstarted.editor.GettingStartedEditorElementFactory&quot; id=&quot;com.ibm.bpm.gettingstarted.noeditor.NoEditorEditor&quot; name=&quot;IBM App Connect Enterprise Toolkit&quot; tooltip=&quot;Getting Started - IBM App Connect Enterprise Toolkit&quot;>&#xD;&#xA;&lt;persistable gettingStartedID=&quot;com.ibm.etools.mft.gettingstarted&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_JxmXspskEe2ab-K_xFdrOg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_LRfdI5skEe2ab-K_xFdrOg" x="30" y="30" width="1600" height="917">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_JxmXspskEe2ab-K_xFdrOg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_LRfdI5skEe2ab-K_xFdrOg" x="0" y="0" width="1600" height="917">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -78,7 +78,7 @@
           <tags>persp.newWizSC:com.ibm.hcls.sdg.ui.newprojectwizard.DataAnalysisNewWizard</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_MNADIpskEe2ab-K_xFdrOg" selectedElement="_MNADLZskEe2ab-K_xFdrOg" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_MNADI5skEe2ab-K_xFdrOg" containerData="2000" selectedElement="_MNADJJskEe2ab-K_xFdrOg">
-              <children xsi:type="basic:PartStack" xmi:id="_MNADJJskEe2ab-K_xFdrOg" elementId="topLeft" containerData="6600" selectedElement="_MNADJZskEe2ab-K_xFdrOg">
+              <children xsi:type="basic:PartStack" xmi:id="_MNADJJskEe2ab-K_xFdrOg" elementId="topLeft" containerData="6600" selectedElement="_MNADJ5skEe2ab-K_xFdrOg">
                 <children xsi:type="advanced:Placeholder" xmi:id="_MNADJZskEe2ab-K_xFdrOg" elementId="com.ibm.etools.mft.navigator.resource" ref="_MJuFoJskEe2ab-K_xFdrOg" closeable="true">
                   <tags>View</tags>
                   <tags>categoryTag:Integration Development</tags>
@@ -111,7 +111,7 @@
                 </children>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_MNADLZskEe2ab-K_xFdrOg" containerData="8000" selectedElement="_MNADLpskEe2ab-K_xFdrOg">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_MNADLZskEe2ab-K_xFdrOg" containerData="8000" selectedElement="_MNADMpskEe2ab-K_xFdrOg">
               <children xsi:type="basic:PartSashContainer" xmi:id="_MNADLpskEe2ab-K_xFdrOg" containerData="6600" selectedElement="_MNADMZskEe2ab-K_xFdrOg" horizontal="true">
                 <children xsi:type="basic:PartStack" xmi:id="_MNADL5skEe2ab-K_xFdrOg" elementId="org.eclipse.gef.ui.palette_viewMStack" toBeRendered="false" containerData="1800">
                   <children xsi:type="advanced:Placeholder" xmi:id="_MNADMJskEe2ab-K_xFdrOg" elementId="org.eclipse.gef.ui.palette_view" toBeRendered="false" ref="_MJwh4pskEe2ab-K_xFdrOg" closeable="true">
@@ -122,6 +122,7 @@
                 <children xsi:type="advanced:Placeholder" xmi:id="_MNADMZskEe2ab-K_xFdrOg" elementId="org.eclipse.ui.editorss" containerData="8200" ref="_MJmw4JskEe2ab-K_xFdrOg"/>
               </children>
               <children xsi:type="basic:PartStack" xmi:id="_MNADMpskEe2ab-K_xFdrOg" elementId="taskArea" containerData="3400" selectedElement="_MNADN5skEe2ab-K_xFdrOg">
+                <tags>active</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_MNADM5skEe2ab-K_xFdrOg" elementId="org.eclipse.ui.views.PropertySheet" ref="_MJv60pskEe2ab-K_xFdrOg" closeable="true">
                   <tags>View</tags>
                   <tags>categoryTag:General</tags>
@@ -155,7 +156,8 @@
           </children>
         </children>
       </children>
-      <children xsi:type="basic:PartStack" xmi:id="_LRfdJZskEe2ab-K_xFdrOg" elementId="stickyFolderRight" containerData="2500" selectedElement="_LRfdJpskEe2ab-K_xFdrOg">
+      <children xsi:type="basic:PartStack" xmi:id="_LRfdJZskEe2ab-K_xFdrOg" elementId="stickyFolderRight" visible="false" containerData="2500" selectedElement="_LRfdJpskEe2ab-K_xFdrOg">
+        <tags>Minimized</tags>
         <children xsi:type="advanced:Placeholder" xmi:id="_LRfdJpskEe2ab-K_xFdrOg" elementId="com.ibm.etools.mft.tutorials.views.TutorialStepsView" ref="_LRe2EJskEe2ab-K_xFdrOg" closeable="true">
           <tags>View</tags>
           <tags>categoryTag:Sample Category</tags>
@@ -214,7 +216,6 @@
       <children xsi:type="basic:PartStack" xmi:id="_MJmw4ZskEe2ab-K_xFdrOg" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_sUUvcJslEe2ab-K_xFdrOg">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
-        <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_kZ6TEJskEe2ab-K_xFdrOg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="HTTPInputMessageFlow.msgflow" iconURI="platform:/plugin/com.ibm.etools.mft.flow/icons/full/view16/msgflow.png" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;com.ibm.etools.mft.flow.editor&quot; name=&quot;HTTPInputMessageFlow.msgflow&quot; partName=&quot;HTTPInputMessageFlow.msgflow&quot; title=&quot;HTTPInputMessageFlow.msgflow&quot; tooltip=&quot;HTTPInputApplication/HTTPInputMessageFlow.msgflow&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/HTTPInputApplication/HTTPInputMessageFlow.msgflow&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
@@ -228,26 +229,24 @@
           <tags>com.ibm.msl.mapping.internal.ui.editor.MappingEditor</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_sUUvcJslEe2ab-K_xFdrOg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="HTTPInputApplication_HTTPInputMessageFlow_Mapping_0001_Test.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;HTTPInputApplication_HTTPInputMessageFlow_Mapping_0001_Test.java&quot; partName=&quot;HTTPInputApplication_HTTPInputMessageFlow_Mapping_0001_Test.java&quot; title=&quot;HTTPInputApplication_HTTPInputMessageFlow_Mapping_0001_Test.java&quot; tooltip=&quot;HTTPInputApplication_Test/src/main/java/test/HTTPInputApplication_HTTPInputMessageFlow_Mapping_0001_Test.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/HTTPInputApplication_Test/src/main/java/test/HTTPInputApplication_HTTPInputMessageFlow_Mapping_0001_Test.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;HTTPInputApplication_HTTPInputMessageFlow_Mapping_0001_Test.java&quot; partName=&quot;HTTPInputApplication_HTTPInputMessageFlow_Mapping_0001_Test.java&quot; title=&quot;HTTPInputApplication_HTTPInputMessageFlow_Mapping_0001_Test.java&quot; tooltip=&quot;HTTPInputApplication_Test/src/main/java/test/HTTPInputApplication_HTTPInputMessageFlow_Mapping_0001_Test.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/HTTPInputApplication_Test/src/main/java/test/HTTPInputApplication_HTTPInputMessageFlow_Mapping_0001_Test.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1041&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>active</tags>
-          <tags>activeOnClose</tags>
         </children>
       </children>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_MJuFoJskEe2ab-K_xFdrOg" elementId="com.ibm.etools.mft.navigator.resource" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Application Development" iconURI="platform:/plugin/com.ibm.etools.mft.navigator/icons/full/view16/msgflow_perspective.gif" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="com.ibm.etools.mft.navigator.resource.viewer.NamespaceNavigator"/>
       <persistedState key="originalCompatibilityViewBundle" value="com.ibm.etools.mft.navigator"/>
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view ProjectsMode=&quot;AppLib&quot; project_scrollbar_horizontal=&quot;0&quot; project_scrollbar_vertical=&quot;0&quot; sectionExpansion=&quot;ONLY_PROJECTS&quot; sectionExpansionFirstWeight=&quot;100&quot; sorter=&quot;0&quot; workingSetName=&quot;&quot;>&#xD;&#xA;&lt;filters>&#xD;&#xA;&lt;filter element=&quot;Empty Parent Broker Schemas&quot;/>&#xD;&#xA;&lt;filter element=&quot;Empty Parent Message Namespaces&quot;/>&#xD;&#xA;&lt;filter element=&quot;Groups (Schema Files)&quot;/>&#xD;&#xA;&lt;filter element=&quot;.*&quot;/>&#xD;&#xA;&lt;filter element=&quot;Elements And Attributes (Schema Files)&quot;/>&#xD;&#xA;&lt;filter element=&quot;Messages (Schema Files)&quot;/>&#xD;&#xA;&lt;filter element=&quot;Types (Schema Files)&quot;/>&#xD;&#xA;&lt;/filters>&#xD;&#xA;&lt;selection>&#xD;&#xA;&lt;element path=&quot;0*/TestModeBarFiles/HTTPInputApplicationproject.TestMode.bar&quot;/>&#xD;&#xA;&lt;/selection>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;element path=&quot;HTTPInputApplication&quot;/>&#xD;&#xA;&lt;element path=&quot;HTTPInputApplication|Flows&quot;/>&#xD;&#xA;&lt;element path=&quot;HTTPInputApplication_Test&quot;/>&#xD;&#xA;&lt;element path=&quot;HTTPInputApplication_Test|Java&quot;/>&#xD;&#xA;&lt;element path=&quot;HTTPInputApplication_Test|Java|test&quot;/>&#xD;&#xA;&lt;element path=&quot;BARs&quot;/>&#xD;&#xA;&lt;element path=&quot;Independent Resources&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;elementMap name=&quot;[HTTPInputApplication]&quot;>&#xD;&#xA;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/HTTPInputApplication&quot; type=&quot;4&quot;/>&#xD;&#xA;&lt;/elementMap>&#xD;&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view ProjectsMode=&quot;AppLib&quot; project_scrollbar_horizontal=&quot;0&quot; project_scrollbar_vertical=&quot;0&quot; sectionExpansion=&quot;ONLY_PROJECTS&quot; sectionExpansionFirstWeight=&quot;100&quot; sorter=&quot;0&quot; workingSetName=&quot;&quot;>&#xD;&#xA;&lt;filters>&#xD;&#xA;&lt;filter element=&quot;Empty Parent Broker Schemas&quot;/>&#xD;&#xA;&lt;filter element=&quot;Empty Parent Message Namespaces&quot;/>&#xD;&#xA;&lt;filter element=&quot;Groups (Schema Files)&quot;/>&#xD;&#xA;&lt;filter element=&quot;.*&quot;/>&#xD;&#xA;&lt;filter element=&quot;Elements And Attributes (Schema Files)&quot;/>&#xD;&#xA;&lt;filter element=&quot;Messages (Schema Files)&quot;/>&#xD;&#xA;&lt;filter element=&quot;Types (Schema Files)&quot;/>&#xD;&#xA;&lt;/filters>&#xD;&#xA;&lt;selection>&#xD;&#xA;&lt;element path=&quot;0*/HTTPInputApplication_Test&quot;/>&#xD;&#xA;&lt;/selection>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;element path=&quot;HTTPInputApplication&quot;/>&#xD;&#xA;&lt;element path=&quot;HTTPInputApplication|Flows&quot;/>&#xD;&#xA;&lt;element path=&quot;HTTPInputApplication_Test&quot;/>&#xD;&#xA;&lt;element path=&quot;HTTPInputApplication_Test|Java&quot;/>&#xD;&#xA;&lt;element path=&quot;HTTPInputApplication_Test|Java|test&quot;/>&#xD;&#xA;&lt;element path=&quot;BARs&quot;/>&#xD;&#xA;&lt;element path=&quot;Independent Resources&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;elementMap name=&quot;[HTTPInputApplication]&quot;>&#xD;&#xA;&lt;item factoryID=&quot;org.eclipse.ui.internal.model.ResourceFactory&quot; path=&quot;/HTTPInputApplication&quot; type=&quot;4&quot;/>&#xD;&#xA;&lt;/elementMap>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:Integration Development</tags>
       <menus xmi:id="_MOvvkJskEe2ab-K_xFdrOg" elementId="com.ibm.etools.mft.navigator.resource">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
       </menus>
-      <toolbar xmi:id="_MOvvkZskEe2ab-K_xFdrOg" elementId="com.ibm.etools.mft.navigator.resource"/>
+      <toolbar xmi:id="_MOvvkZskEe2ab-K_xFdrOg" elementId="com.ibm.etools.mft.navigator.resource" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_MJussJskEe2ab-K_xFdrOg" elementId="com.ibm.etools.patterns.views.PatternExplorerView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Patterns Explorer" iconURI="platform:/plugin/com.ibm.etools.patterns.ui/icons/full/view16/patternsExplorerView_obj.gif" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="com.ibm.etools.patterns.views.PatternExplorerView"/>
@@ -271,7 +270,7 @@
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
       </menus>
-      <toolbar xmi:id="_NJNzwZskEe2ab-K_xFdrOg" elementId="org.eclipse.jdt.junit.ResultView" visible="false"/>
+      <toolbar xmi:id="_NJNzwZskEe2ab-K_xFdrOg" elementId="org.eclipse.jdt.junit.ResultView"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_MJvTwZskEe2ab-K_xFdrOg" elementId="org.eclipse.ui.views.BookmarkView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Bookmarks" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/bkmrk_nav.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.views.markers.BookmarksView"/>
@@ -339,6 +338,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_m7VRgJslEe2ab-K_xFdrOg" elementId="org.eclipse.ui.console.ConsoleView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -370,7 +371,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_MHWuIJskEe2ab-K_xFdrOg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_MHZKZ5skEe2ab-K_xFdrOg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_J3oHhpskEe2ab-K_xFdrOg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_9qTU0JvKEe25dtIYVTs7AA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_J3oHhpskEe2ab-K_xFdrOg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_MHWuIZskEe2ab-K_xFdrOg" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -404,7 +405,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_MHWuKJskEe2ab-K_xFdrOg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_MHZxcpskEe2ab-K_xFdrOg" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_J3ngsJskEe2ab-K_xFdrOg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_9qVxEJvKEe25dtIYVTs7AA" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_J3ngsJskEe2ab-K_xFdrOg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_MHWuKZskEe2ab-K_xFdrOg" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -444,7 +445,12 @@
         <tags>Draggable</tags>
       </children>
     </trimBars>
-    <trimBars xmi:id="_JxmXuZskEe2ab-K_xFdrOg" elementId="org.eclipse.ui.trim.vertical2" contributorURI="platform:/plugin/org.eclipse.ui.workbench" side="Right"/>
+    <trimBars xmi:id="_JxmXuZskEe2ab-K_xFdrOg" elementId="org.eclipse.ui.trim.vertical2" contributorURI="platform:/plugin/org.eclipse.ui.workbench" side="Right">
+      <children xsi:type="menu:ToolControl" xmi:id="_5aRNkJvLEe25dtIYVTs7AA" elementId="stickyFolderRight(minimized)" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
+        <tags>TrimStack</tags>
+        <tags>Draggable</tags>
+      </children>
+    </trimBars>
   </children>
   <bindingTables xmi:id="_JxmXupskEe2ab-K_xFdrOg" contributorURI="platform:/plugin/org.eclipse.ui.workbench" bindingContext="_JxmXu5skEe2ab-K_xFdrOg">
     <bindings xmi:id="_J4DlB5skEe2ab-K_xFdrOg" keySequence="CTRL+1" command="_J3jPA5skEe2ab-K_xFdrOg"/>
