@@ -74,10 +74,7 @@ jobs:
           ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b build/GeneratedBarFiles/testbar.bar -p build/properties/DEV.properties -o build/GeneratedBarFiles/testbar_DEV.bar -r
           ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b build/GeneratedBarFiles/testbar.bar -p build/properties/QA.properties -o build/GeneratedBarFiles/testbar_QA.bar -r
       
-      - name: Setup JDK to compile unit test
-        uses: actions/setup-java@v1
-        with:
-          java-version: 14
+     
       
       - name: Unit Testing
         run: | 
