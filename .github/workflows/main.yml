@@ -74,6 +74,9 @@ jobs:
           ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b build/GeneratedBarFiles/testbar.bar -p build/properties/DEV.properties -o build/GeneratedBarFiles/testbar_DEV.bar -r
           ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b build/GeneratedBarFiles/testbar.bar -p build/properties/QA.properties -o build/GeneratedBarFiles/testbar_QA.bar -r
           
+          ls -al 
+          ls -al ./build
+          ls -al ./build/HTTPInputApplication_Test
           ibmint package --input-path build/HTTPInputApplication_Test --output-bar-file build/GeneratedBarFiles/unittest.bar
           
           #git config --global user.name "HolaJinn"
