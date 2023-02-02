@@ -44,6 +44,10 @@ jobs:
             ./opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b app/GeneratedBarFiles/testbar.bar -p app/properties/DEV.properties -o app/GeneratedBarFiles/testbar_DEV.bar -r
             ./opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b app/GeneratedBarFiles/testbar.bar -p app/properties/QA.properties -o app/GeneratedBarFiles/testbar_QA.bar -r
             ls -al /app/GeneratedBarFiles
+            
+      - name: Check
+        run: |
+          ls -al HTTPInputApplication/GeneratedBarFiles          
           
           
       #- name: build bar
