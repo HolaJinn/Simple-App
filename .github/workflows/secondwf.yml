@@ -47,7 +47,7 @@ jobs:
             
       - name: Check
         run: |
-          ls -al HTTPInputApplication/GeneratedBarFiles          
+          ls -al GeneratedBarFiles          
           
           
       #- name: build bar
