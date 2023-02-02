@@ -1,0 +1,92 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a set of commands using the runners shell
+    - name: Run Docker container to compile assets
+      uses: addnab/docker-run-action@v3
+      with:
+        username: cp
+        password: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJQk0gTWFya2V0cGxhY2UiLCJpYXQiOjE2NzQ3MjI3NTQsImp0aSI6IjM1MGI3NGZmNzFhYzQxMGE4NDUxNzc1ZjRiMWI3YjdiIn0.gELGivzptT_-tkbGiS6bEv_vyeFkSWYB86HX4dDhk1w
+        registry: cp.icr.io
+        image: cp.icr.io/cp/appc/ace:12.0.7.0-r1@sha256:376b4008901f5306af3e4235a54f3b6a27e18cfe00a22cc6d673fd1d95b95231
+        options: -v ${{ github.workspace }}:/app
+        run: |
+          ls -al /app/build
+          echo 'this is test' > /app/build/test.txt
+          ls -al /opt/ibm/ace-12/server/bin/
+          export LICENSE=accept
+          export MQSI_WORKPATH=$PWD/var/mqsi
+          . /opt/ibm/ace-12/server/bin/mqsiprofile
+          ./opt/ibm/ace-12/server/bin/ibmint package -help
+          
+      #- name: build bar
+       # run: |
+        #  export LICENSE=accept
+         # export MQSI_WORKPATH=$PWD/ace-minimal-image-unzip/var/mqsi
+          #. ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiprofile
+                    
+          ### This command works for building bar file and overriding properties ###
+          #ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsipackagebar -w . -a build/GeneratedBarFiles/testbar.bar -o build/HTTPInputApplication/HTTPInputMessageFlow.msgflow -k ./build/HTTPInputApplication
+          #ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b build/GeneratedBarFiles/testbar.bar -p build/properties/DEV.properties -o build/GeneratedBarFiles/testbar_DEV.bar -r
+          #ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b build/GeneratedBarFiles/testbar.bar -p build/properties/QA.properties -o build/GeneratedBarFiles/testbar_QA.bar -r
+      
+          #ls -al ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/
+      
+      #- name: Unit Testing
+        #run: | 
+          #export LICENSE=accept
+          #export MQSI_WORKPATH=$PWD/ace-minimal-image-unzip/var/mqsi
+          #. ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsiprofile
+          
+          #ls -al 
+          #ls -al build
+          
+          #ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/ibmint package --input-path build/HTTPInputApplicationTest --output-bar-file unittest.bar
+          
+          #ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsipackagebar -w . -a build/GeneratedBarFiles/unittest.bar -o build/HTTPInputApplicationTest -k ./build/HTTPInputApplicationTest
+          #ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/ibmint package --input-bar-file build/GeneratedBarFiles/unittest.bar --output-bar-file build/GeneratedBarFiles/unittest.bar
+          
+          
+          
+          #ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/mqsicreateworkdir workdir
+          #ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/ibmint deploy --input-bar-file ./build/GeneratedBarFiles/testbar.bar --output-work-dir workdir
+          #ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/ibmint deploy --input-bar-file ./build/GeneratedBarFiles/unittest.bar --output-work-dir workdir
+          #IntegrationServer --work-dir workdir --test-project ./build/HTTPInputApplication_Test --start-msgflows false
+          
+          #git config --global user.name "HolaJinn"
+          #git config --global user.email "HolaJinn@users.noreply.github.com"
+          #git add ./build/GeneratedBarFiles/*
+          #git commit -m "Add bar files"
+          #git push
+          
+          #ace-minimal-image-unzip/opt/ibm/ace-12/server/bin/ibmint package --input-path ./build/Test.App/ --output-bar-file ./testbar.bar --do-not-compile-java
+          #pwd
+          #ls -al
+          #echo "listing"
+          #ls -al ./build/Test.App
+          #ls -al $MQSI_WORKPATH
+     
