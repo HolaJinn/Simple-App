@@ -40,7 +40,8 @@ jobs:
             export LICENSE=accept
             export MQSI_WORKPATH=$PWD/var/mqsi
             . /opt/ibm/ace-12/server/bin/mqsiprofile
-            #./opt/ibm/ace-12/server/bin/mqsipackagebar -w . -a app/build/GeneratedBarFiles/testbar.bar -o app/build/HTTPInputApplication/HTTPInputMessageFlow.msgflow -k ./app/build/HTTPInputApplication
+            ./opt/ibm/ace-12/server/bin/mqsipackagebar -w . -a app/GeneratedBarFiles/testbar.bar -o app/HTTPInputApplication/HTTPInputMessageFlow.msgflow -k ./app/HTTPInputApplication
+            ls -al /app/GeneratedBarFiles
           
           
       #- name: build bar
