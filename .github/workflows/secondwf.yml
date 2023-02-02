@@ -41,6 +41,8 @@ jobs:
             export MQSI_WORKPATH=$PWD/var/mqsi
             . /opt/ibm/ace-12/server/bin/mqsiprofile
             ./opt/ibm/ace-12/server/bin/mqsipackagebar -w . -a app/GeneratedBarFiles/testbar.bar -o app/HTTPInputApplication/HTTPInputMessageFlow.msgflow -k ./app/HTTPInputApplication
+            ./opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b app/GeneratedBarFiles/testbar.bar -p app/properties/DEV.properties -o app/GeneratedBarFiles/testbar_DEV.bar -r
+            ./opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b app/GeneratedBarFiles/testbar.bar -p app/properties/QA.properties -o app/GeneratedBarFiles/testbar_QA.bar -r
             ls -al /app/GeneratedBarFiles
           
           
