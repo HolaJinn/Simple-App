@@ -39,7 +39,7 @@ jobs:
             chmod 777 -R ./app
             #ls -al opt/ibm/ace-12/server/bin/
             pwd
-            echo ${{ github.workspace }}
+            ls -al 
             export LICENSE=accept
             export MQSI_WORKPATH=$PWD/var/mqsi
             . /opt/ibm/ace-12/server/bin/mqsiprofile
