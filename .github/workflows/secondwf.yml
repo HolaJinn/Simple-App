@@ -32,7 +32,7 @@ jobs:
           username: cp
           password: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJQk0gTWFya2V0cGxhY2UiLCJpYXQiOjE2NzQ3MjI3NTQsImp0aSI6IjM1MGI3NGZmNzFhYzQxMGE4NDUxNzc1ZjRiMWI3YjdiIn0.gELGivzptT_-tkbGiS6bEv_vyeFkSWYB86HX4dDhk1w
           registry: cp.icr.io
-          image: cp.icr.io/cp/appc/ace-server-prod@sha256:e1940cfedde96de2cdd345a7ca8184a69f57963874faffcd6da670243aecad47
+          image: cp.icr.io/cp/appc/ace-server-prod@sha256:473bbea96e65025c11c91014ac8dd72641212bd2f5f35d661dca7b3242f4155c
           options: -v ${{ github.workspace }}:/app -u root
           run: |
             cd ../..
