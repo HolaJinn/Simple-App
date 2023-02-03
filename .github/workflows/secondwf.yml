@@ -56,6 +56,7 @@ jobs:
             ls -al /app
             ./opt/ibm/ace-12/server/bin/IntegrationServer --work-dir /app/workdir --test-project /app/HTTPInputApplicationTest --start-msgflows false
             
+            
       - name: Check
         run: |
           ls -al GeneratedBarFiles          
