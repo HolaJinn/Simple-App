@@ -38,6 +38,8 @@ jobs:
             cd ../..
             chmod 777 -R ./app
             ls -al
+            sudo apt update
+            sudo apt install default-jdk
             java -version
             #ls -al opt/ibm/ace-12/server/bin/
             export LICENSE=accept
