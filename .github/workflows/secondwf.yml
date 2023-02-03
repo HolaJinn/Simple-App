@@ -38,7 +38,7 @@ jobs:
             cd ../..
             chmod 777 -R ./app
             ls -al
-            ls -al bin
+            ls -al usr/bin
             apk update
             apt-get update
             apt-get install default-jdk
