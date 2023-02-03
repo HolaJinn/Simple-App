@@ -32,7 +32,7 @@ jobs:
           username: cp
           password: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJQk0gTWFya2V0cGxhY2UiLCJpYXQiOjE2NzQ3MjI3NTQsImp0aSI6IjM1MGI3NGZmNzFhYzQxMGE4NDUxNzc1ZjRiMWI3YjdiIn0.gELGivzptT_-tkbGiS6bEv_vyeFkSWYB86HX4dDhk1w
           registry: cp.icr.io
-          image: cp.icr.io/cp/appc/ace-server-prod@sha256:48569e3e1e219682e0ff5e24a810bf89317bb4ae961a02691c4dc206d74fce75
+          image: cp.icr.io/cp/appc/ace-server-prod@sha256:3dbcc7caa22b0b0e6a5467cbb1a6086fafa0e125682dee4d2f51b7a59cecc766
           options: -v ${{ github.workspace }}:/app -u root
           run: |
             cd ../..
@@ -46,7 +46,7 @@ jobs:
             ./opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b app/GeneratedBarFiles/testbar.bar -p app/properties/DEV.properties -o app/GeneratedBarFiles/testbar_DEV.bar -r
             ./opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b app/GeneratedBarFiles/testbar.bar -p app/properties/QA.properties -o app/GeneratedBarFiles/testbar_QA.bar -r
             ls -al /app/GeneratedBarFiles
-            ./opt/ibm/ace-12/server/bin/ibmint package --input-path app/HTTPInputApplicationTest --do-not-compile-java --output-bar-file app/GeneratedBarFiles/unittest.bar
+            ./opt/ibm/ace-12/server/bin/ibmint package --input-path app/HTTPInputApplicationTest --output-bar-file app/GeneratedBarFiles/unittest.bar
             ./opt/ibm/ace-12/server/bin/mqsicreateworkdir workdir
             #./opt/ibm/ace-12/server/bin/ibmint deploy --input-path app/HTTPInputApplicationTest --output-work-dir workdir
             
