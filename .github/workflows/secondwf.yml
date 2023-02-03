@@ -37,17 +37,12 @@ jobs:
           run: |
             cd ../..
             chmod 777 -R ./app
-            ls -al
-            ls -al usr/bin
-            apk update
-            apt-get update
-            apt-get install default-jdk
-            java -version
             #ls -al opt/ibm/ace-12/server/bin/
             export LICENSE=accept
             export MQSI_WORKPATH=$PWD/var/mqsi
             . /opt/ibm/ace-12/server/bin/mqsiprofile
-            ./opt/ibm/ace-12/server/bin/mqsipackagebar -w . -a app/GeneratedBarFiles/testbar.bar -o app/HTTPInputApplication/HTTPInputMessageFlow.msgflow -k ./app/HTTPInputApplication
+            ./opt/ibm/ace-12/server/bin/ibmint package --input-path app/HTTPInputApplication --output-bar-file app/GeneratedBarFiles/testbar.bar
+            #./opt/ibm/ace-12/server/bin/mqsipackagebar -w . -a app/GeneratedBarFiles/testbar.bar -o app/HTTPInputApplication/HTTPInputMessageFlow.msgflow -k ./app/HTTPInputApplication
             ./opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b app/GeneratedBarFiles/testbar.bar -p app/properties/DEV.properties -o app/GeneratedBarFiles/testbar_DEV.bar -r
             ./opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b app/GeneratedBarFiles/testbar.bar -p app/properties/QA.properties -o app/GeneratedBarFiles/testbar_QA.bar -r
             ls -al /app/GeneratedBarFiles
