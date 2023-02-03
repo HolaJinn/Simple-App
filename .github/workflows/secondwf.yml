@@ -36,6 +36,7 @@ jobs:
           options: -v ${{ github.workspace }}:/app
           run: |
             cd ../..
+            chmod 777 -R ./app
             ls -al
             #ls -al opt/ibm/ace-12/server/bin/
             export LICENSE=accept
