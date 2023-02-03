@@ -46,7 +46,9 @@ jobs:
             ./opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b app/GeneratedBarFiles/testbar.bar -p app/properties/DEV.properties -o app/GeneratedBarFiles/testbar_DEV.bar -r
             ./opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b app/GeneratedBarFiles/testbar.bar -p app/properties/QA.properties -o app/GeneratedBarFiles/testbar_QA.bar -r
             ls -al /app/GeneratedBarFiles
-            ./opt/ibm/ace-12/server/bin/ibmint package --input-path app/HTTPInputApplicationTest --output-bar-file app/GeneratedBarFiles/unittest.bar
+            #./opt/ibm/ace-12/server/bin/ibmint package --input-path app/HTTPInputApplicationTest --output-bar-file app/GeneratedBarFiles/unittest.bar
+            ./opt/ibm/ace-12/server/bin/mqsicreateworkdir workdir
+            ./opt/ibm/ace-12/server/bin/ibmint deploy --input-path app/HTTPInputApplicationTest --output-work-dir workdir
             
       - name: Check
         run: |
