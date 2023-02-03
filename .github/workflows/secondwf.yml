@@ -38,6 +38,7 @@ jobs:
             cd ../..
             chmod 777 -R ./app
             ls -al
+            java -version
             #ls -al opt/ibm/ace-12/server/bin/
             export LICENSE=accept
             export MQSI_WORKPATH=$PWD/var/mqsi
