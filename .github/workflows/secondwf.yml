@@ -33,7 +33,7 @@ jobs:
           password: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJQk0gTWFya2V0cGxhY2UiLCJpYXQiOjE2NzQ3MjI3NTQsImp0aSI6IjM1MGI3NGZmNzFhYzQxMGE4NDUxNzc1ZjRiMWI3YjdiIn0.gELGivzptT_-tkbGiS6bEv_vyeFkSWYB86HX4dDhk1w
           registry: cp.icr.io
           image: cp.icr.io/cp/appc/ace-server-prod@sha256:e1940cfedde96de2cdd345a7ca8184a69f57963874faffcd6da670243aecad47
-          options: -v ${{ github.workspace }}:/app
+          options: -v ${{ github.workspace }}:/app -u root
           run: |
             cd ../..
             chmod 777 -R ./app
