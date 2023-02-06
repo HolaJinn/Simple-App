@@ -58,7 +58,7 @@ jobs:
             ls -al home/aceuser
             ls -al /app
             ls -al /app/workdir/run
-            ./opt/ibm/ace-12/server/bin/IntegrationServer --work-dir /app/workdir/ --test-project /app/HTTPInputApplication/ --start-msgflows false
+            ./opt/ibm/ace-12/server/bin/IntegrationServer --work-dir /app/workdir/ --test-project /app/workdir/run/HTTPInputApplication/ --start-msgflows false
             
             
       - name: Check
