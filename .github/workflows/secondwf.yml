@@ -44,22 +44,22 @@ jobs:
             export MQSI_WORKPATH=$PWD/var/mqsi
             . /opt/ibm/ace-12/server/bin/mqsiprofile
             
-            export BIN_PATH=./opt/ibm/ace-12/server/bin/
+            export ACE_BIN_PATH=./opt/ibm/ace-12/server/bin/
             
-            $BIN_PATH/ibmint package --input-path /app/HTTPInputApplication/ --output-bar-file /app/GeneratedBarFiles/testbar.bar
-            #./opt/ibm/ace-12/server/bin/ibmint package --input-path /app/HTTPInputApplication/ --output-bar-file /app/GeneratedBarFiles/testbar.bar
-            #./opt/ibm/ace-12/server/bin/mqsipackagebar -w . -a app/GeneratedBarFiles/testbar.bar -o app/HTTPInputApplication/HTTPInputMessageFlow.msgflow -k ./app/HTTPInputApplication
-            ./opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b app/GeneratedBarFiles/testbar.bar -p app/properties/DEV.properties -o app/GeneratedBarFiles/testbar_DEV.bar -r
-            ./opt/ibm/ace-12/server/bin/mqsiapplybaroverride -b app/GeneratedBarFiles/testbar.bar -p app/properties/QA.properties -o app/GeneratedBarFiles/testbar_QA.bar -r
+            $ACE_BIN_PATH/ibmint package --input-path /app/HTTPInputApplication/ --output-bar-file /app/GeneratedBarFiles/testbar.bar
+            #$ACE_BIN_PATH/ibmint package --input-path /app/HTTPInputApplication/ --output-bar-file /app/GeneratedBarFiles/testbar.bar
+            #$ACE_BIN_PATH/mqsipackagebar -w . -a app/GeneratedBarFiles/testbar.bar -o app/HTTPInputApplication/HTTPInputMessageFlow.msgflow -k ./app/HTTPInputApplication
+            $ACE_BIN_PATH/mqsiapplybaroverride -b app/GeneratedBarFiles/testbar.bar -p app/properties/DEV.properties -o app/GeneratedBarFiles/testbar_DEV.bar -r
+            $ACE_BIN_PATH/mqsiapplybaroverride -b app/GeneratedBarFiles/testbar.bar -p app/properties/QA.properties -o app/GeneratedBarFiles/testbar_QA.bar -r
             
-            ./opt/ibm/ace-12/server/bin/ibmint package --input-path /app/HTTPInputApplicationTest/ --output-bar-file /app/GeneratedBarFiles/unittest.bar
-            ./opt/ibm/ace-12/server/bin/mqsicreateworkdir /app/workdir
-            ./opt/ibm/ace-12/server/bin/ibmint deploy --input-bar-file /app/GeneratedBarFiles/unittest.bar --output-work-dir /app/workdir
-            ./opt/ibm/ace-12/server/bin/ibmint deploy --input-bar-file /app/GeneratedBarFiles/testbar.bar --output-work-dir /app/workdir
+            $ACE_BIN_PATH/ibmint package --input-path /app/HTTPInputApplicationTest/ --output-bar-file /app/GeneratedBarFiles/unittest.bar
+            $ACE_BIN_PATH/mqsicreateworkdir /app/workdir
+            $ACE_BIN_PATH/ibmint deploy --input-bar-file /app/GeneratedBarFiles/unittest.bar --output-work-dir /app/workdir
+            $ACE_BIN_PATH/ibmint deploy --input-bar-file /app/GeneratedBarFiles/testbar.bar --output-work-dir /app/workdir
 
             cd app
             ls 
-            #./opt/ibm/ace-12/server/bin/IntegrationServer --work-dir /app/workdir/
+            #$ACE_BIN_PATH/IntegrationServer --work-dir /app/workdir/
             ../opt/ibm/ace-12/server/bin/IntegrationServer --work-dir workdir --test-project HTTPInputApplicationTest --start-msgflows false
             
             
