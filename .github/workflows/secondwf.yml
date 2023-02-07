@@ -29,7 +29,7 @@ jobs:
       - name: Run Docker container to compile assets
         uses: addnab/docker-run-action@v3
         with:
-          username: cp
+          username: ${{secrets.USERNAME}}
           password: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJQk0gTWFya2V0cGxhY2UiLCJpYXQiOjE2NzQ3MjI3NTQsImp0aSI6IjM1MGI3NGZmNzFhYzQxMGE4NDUxNzc1ZjRiMWI3YjdiIn0.gELGivzptT_-tkbGiS6bEv_vyeFkSWYB86HX4dDhk1w
           registry: cp.icr.io
           #image: cp.icr.io/cp/appc/ace-server-prod@sha256:3dbcc7caa22b0b0e6a5467cbb1a6086fafa0e125682dee4d2f51b7a59cecc766
