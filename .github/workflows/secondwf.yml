@@ -30,10 +30,9 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           username: ${{secrets.USERNAME}}
-          password: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJQk0gTWFya2V0cGxhY2UiLCJpYXQiOjE2NzQ3MjI3NTQsImp0aSI6IjM1MGI3NGZmNzFhYzQxMGE4NDUxNzc1ZjRiMWI3YjdiIn0.gELGivzptT_-tkbGiS6bEv_vyeFkSWYB86HX4dDhk1w
-          registry: cp.icr.io
-          #image: cp.icr.io/cp/appc/ace-server-prod@sha256:3dbcc7caa22b0b0e6a5467cbb1a6086fafa0e125682dee4d2f51b7a59cecc766
-          image: cp.icr.io/cp/appc/ace:12.0.7.0-r1@sha256:376b4008901f5306af3e4235a54f3b6a27e18cfe00a22cc6d673fd1d95b95231
+          password: ${{secrets.PASSWORD}}
+          registry: ${{secrets.REGISTRY}}
+          image: ${{secrets.IMAGE}}
           options: -v ${{ github.workspace }}:/app -u root
           run: |
             cd ../..
@@ -47,7 +46,6 @@ jobs:
             export ACE_BIN_PATH=./opt/ibm/ace-12/server/bin/
             
             $ACE_BIN_PATH/ibmint package --input-path /app/HTTPInputApplication/ --output-bar-file /app/GeneratedBarFiles/testbar.bar
-            #$ACE_BIN_PATH/ibmint package --input-path /app/HTTPInputApplication/ --output-bar-file /app/GeneratedBarFiles/testbar.bar
             #$ACE_BIN_PATH/mqsipackagebar -w . -a app/GeneratedBarFiles/testbar.bar -o app/HTTPInputApplication/HTTPInputMessageFlow.msgflow -k ./app/HTTPInputApplication
             $ACE_BIN_PATH/mqsiapplybaroverride -b app/GeneratedBarFiles/testbar.bar -p app/properties/DEV.properties -o app/GeneratedBarFiles/testbar_DEV.bar -r
             $ACE_BIN_PATH/mqsiapplybaroverride -b app/GeneratedBarFiles/testbar.bar -p app/properties/QA.properties -o app/GeneratedBarFiles/testbar_QA.bar -r
