@@ -1,6 +1,6 @@
 # This is a basic workflow build and deploy ACE Applications
 
-name: CI
+name: ACE Pipeline
 
 # Controls when the action will run. 
 on:
