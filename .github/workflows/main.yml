@@ -69,5 +69,6 @@ jobs:
           git config --global user.email "HolaJinn@users.noreply.github.com"
           git add GeneratedBarFiles/testbar.bar
           git commit -m "Add bar files"
-          git push
+          git tag -a v1 -m "first version"
+          git push --tags
      
