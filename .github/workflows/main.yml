@@ -19,6 +19,7 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    if: always()
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -56,7 +57,7 @@ jobs:
             $ACE_BIN_PATH/ibmint deploy --input-bar-file /app/GeneratedBarFiles/testbar.bar --output-work-dir /app/workdir
 
             cd app
-            ../opt/ibm/ace-12/server/bin/IntegrationServer --work-dir workdir --test-project HTTPInputApplicationTest --start-msgflows false || true
+            ../opt/ibm/ace-12/server/bin/IntegrationServer --work-dir workdir --test-project HTTPInputApplicationTest --start-msgflows false
             
       #- name: Test Report
        # uses: dorny/test-reporter@v1
