@@ -56,10 +56,7 @@ jobs:
             $ACE_BIN_PATH/ibmint deploy --input-bar-file /app/GeneratedBarFiles/testbar.bar --output-work-dir /app/workdir
 
             cd app
-            ls 
-            #$ACE_BIN_PATH/IntegrationServer --work-dir /app/workdir/
-            ../opt/ibm/ace-12/server/bin/IntegrationServer --work-dir workdir --test-project HTTPInputApplicationTest --start-msgflows false > report.xml
-            ls -al GeneratedBarFiles
+            ../opt/ibm/ace-12/server/bin/IntegrationServer --work-dir workdir --test-project HTTPInputApplicationTest --start-msgflows false
             
       #- name: Test Report
        # uses: dorny/test-reporter@v1
@@ -72,11 +69,7 @@ jobs:
       
       - name: Check
         run: |
-          ls -al 
-          cat report.xml
-          ls -al GeneratedBarFiles
           sudo chmod 777 -R GeneratedBarFiles
-          ls -al GeneratedBarFiles          
           git config --global user.name "HolaJinn"
           git config --global user.email "HolaJinn@users.noreply.github.com"
           git add GeneratedBarFiles/*.bar
