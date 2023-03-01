@@ -80,7 +80,7 @@
       <JSON iib:parser="json">
          <Data>
             <OutputField1 iib:valueType="CHARACTER">Hello</OutputField1>
-            <OutputField2 iib:valueType="CHARACTER">World2</OutputField2>
+            <OutputField2 iib:valueType="CHARACTER">World</OutputField2>
          </Data>
       </JSON>
    </message>
