@@ -59,7 +59,7 @@ jobs:
             ls 
             #$ACE_BIN_PATH/IntegrationServer --work-dir /app/workdir/
             ../opt/ibm/ace-12/server/bin/IntegrationServer --work-dir workdir --test-project HTTPInputApplicationTest --start-msgflows false > report.xml
-          
+            ls -al GeneratedBarFiles
             
       #- name: Test Report
        # uses: dorny/test-reporter@v1
@@ -72,6 +72,7 @@ jobs:
       
       - name: Check
         run: |
+          ls -al GeneratedBarFiles
           chmod 777 -R GeneratedBarFiles
           ls -al GeneratedBarFiles          
           git config --global user.name "HolaJinn"
