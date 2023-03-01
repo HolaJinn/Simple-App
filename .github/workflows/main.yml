@@ -72,11 +72,11 @@ jobs:
       
       - name: Check
         run: |
+          chmod 777 -R GeneratedBarFiles
           ls -al GeneratedBarFiles          
-          #chmod 777 -R GeneratedBarFiles
           git config --global user.name "HolaJinn"
           git config --global user.email "HolaJinn@users.noreply.github.com"
-          git add GeneratedBarFiles/testbar.bar
+          git add GeneratedBarFiles/testbar_DEV.bar
           git commit -m "Add bar files"
           git tag -a v1 -m "first version"
           git push --tags
