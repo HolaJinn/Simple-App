@@ -72,8 +72,9 @@ jobs:
       
       - name: Check
         run: |
+          ls -al 
           ls -al GeneratedBarFiles
-          chmod 777 -R GeneratedBarFiles
+          sudo chmod 777 -R GeneratedBarFiles
           ls -al GeneratedBarFiles          
           git config --global user.name "HolaJinn"
           git config --global user.email "HolaJinn@users.noreply.github.com"
