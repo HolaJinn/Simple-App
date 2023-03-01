@@ -73,13 +73,14 @@ jobs:
       - name: Check
         run: |
           ls -al 
+          cat report.xml
           ls -al GeneratedBarFiles
           sudo chmod 777 -R GeneratedBarFiles
           ls -al GeneratedBarFiles          
           git config --global user.name "HolaJinn"
           git config --global user.email "HolaJinn@users.noreply.github.com"
-          git add GeneratedBarFiles/testbar_DEV.bar
+          git add GeneratedBarFiles/*.bar
           git commit -m "Add bar files"
-          git tag -a v1 -m "first version"
+          git tag -a v2 -m "first version"
           git push --tags
      
