@@ -66,6 +66,7 @@ jobs:
           #path: report.xml    # Path to test results
           #reporter: jest-junit        # Format of test results  
           
+          
       - name: Send mail
         if: always()
         uses: dawidd6/action-send-mail@v2
@@ -81,9 +82,9 @@ jobs:
           # email body as text
           body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
           # comma-separated string, send email to
-          to: yacine.benamor@edifixio.com
+          to: yacine.benamor@edifixio.com,
           # from email name
-          from: John Doe
+          from: Yacine Ben Amor
       
       - name: Check
         run: |
