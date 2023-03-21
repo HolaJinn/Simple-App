@@ -5,6 +5,9 @@ name: ACE Pipeline
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
+  create:
+    tags: 
+     - '**'
   push:
     branches: [ master ]
   pull_request:
@@ -24,6 +27,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+        
+      - name: Test
+        run: |
+          echo $RELEASE_VERSION
+          echo ${{ env.RELEASE_VERSION }}
 
       # Runs a set of commands using the runners shell
       - name: build and test
@@ -56,27 +67,39 @@ jobs:
             $ACE_BIN_PATH/ibmint deploy --input-bar-file /app/GeneratedBarFiles/testbar.bar --output-work-dir /app/workdir
 
             cd app
-            ls 
-            #$ACE_BIN_PATH/IntegrationServer --work-dir /app/workdir/
-            ../opt/ibm/ace-12/server/bin/IntegrationServer --work-dir workdir --test-project HTTPInputApplicationTest --start-msgflows false > report.xml
-            ls -al GeneratedBarFiles
-            
+            ../opt/ibm/ace-12/server/bin/IntegrationServer --work-dir workdir --test-project HTTPInputApplicationTest --start-msgflows false
+           
       #- name: Test Report
        # uses: dorny/test-reporter@v1
         #if: success() || failure()    # run this step even if previous step failed
         #with:
          # name: JEST Tests            # Name of the check run which will be created
           #path: report.xml    # Path to test results
-          #reporter: jest-junit        # Format of test results      
-      
+          #reporter: jest-junit        # Format of test results  
+          
+          
+      #- name: Send mail
+       # if: always()
+       # uses: dawidd6/action-send-mail@v2
+       # with:
+          # mail server settings
+        #  server_address: smtp.gmail.com
+         # server_port: 465
+          # user credentials
+         # username: ${{ secrets.EMAIL_USERNAME }}
+         # password: ${{ secrets.EMAIL_PASSWORD }}
+          # email subject
+         # subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
+          # email body as text
+          #body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
+          # comma-separated string, send email to
+          #to: yacine.benamor@edifixio.com,
+          # from email name
+          #from: Yacine Ben Amor
       
       - name: Check
         run: |
-          ls -al 
-          cat report.xml
-          ls -al GeneratedBarFiles
           sudo chmod 777 -R GeneratedBarFiles
-          ls -al GeneratedBarFiles          
           git config --global user.name "HolaJinn"
           git config --global user.email "HolaJinn@users.noreply.github.com"
           git add GeneratedBarFiles/*.bar
